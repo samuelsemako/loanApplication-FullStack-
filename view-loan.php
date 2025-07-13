@@ -69,44 +69,37 @@
                         <div class="profileDiv">
                             <div class="profile-content">
                                 <span>Loan Id:</span>
-                                <span class="blue">LOAN102938484747476</span>
+                                <span class="blue" id="loanId"></span>
                             </div>
 
                             <div class="profile-content">
                                 <span>Fullname:</span>
-                                <span class="blue">Samuel Semako</span>
+                                <span class="blue" id="fullName"></span>
                             </div>
 
                             <div class="profile-content">
                                 <span>Amount:</span>
-                                <span class="blue">₦600,000.00</span>
+                                <span class="blue" id="loanAmount"></span>
                             </div>
 
                             <div class="profile-content">
                                 <span>Total Repayment:</span>
-                                <span class="blue">₦613,000.00</span>
+                                <span class="blue" id="totalRepayment"></span>
                             </div>
 
                             <div class="profile-content">
                                 <span>Duration:</span>
-                                <span class="blue">6 months</span>
+                                <span class="blue" id="loanDuration"></span>
                             </div>
 
                             <div class="profile-content">
                                 <span>Date:</span>
-                                <span class="blue">2025-05-20 12:42:15</span>
+                                <span class="blue" id="date"></span>
                             </div>
                         </div>
 
                         <div class="tableContentDiv">
-                            <table id="loanBreakdown">
-
-
-                                <script>
-                                    _fetchBreakdown(loanId)
-                                </script>
-
-                            </table>
+                            <table id="loanBreakdown"> </table>
                         </div>
                     </div>
                 </div>

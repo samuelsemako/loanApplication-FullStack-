@@ -155,12 +155,34 @@ function _fetchBreakdown(loanId) {
     success: function (response) {
       const records = response.data;
 
-      $("#loanBreakdown").html(""); // Clear existing rows
+      $("#loanBreakdown").html(""); 
 
       if (!response.success || records.length === 0) {
         _actionAlert("No breakdown found for this loan.", false);
         return;
       }
+
+      $('#loanId').text(response.loanId);
+      $('#fullName').text(response.fullName);
+      $('#loanAmount').text(Number(response.loanAmount).toLocaleString('en-NG'));
+      $('#totalRepayment').text(Number(response.totalrepayment).toLocaleString('en-NG'));
+      $('#loanDuration').text(response.loanDuration  + ' Months');
+      $('#date').text(response.date);
+      
+
+      let html ="";
+      html =
+        `
+          <tr>
+            <th>S/N</th>
+            <th>Month</th>
+            <th>Loan Amount</th>
+            <th>Sub Payment</th>
+            <th>Interest Amount</th>
+            <th>Monthly Repayment</th>
+          </tr>
+        `
+      $('#loanBreakdown').append(html);
 
        
 
@@ -178,7 +200,6 @@ function _fetchBreakdown(loanId) {
 
                     </tr>`;
       });
-      _actionAlert(loanId, true);
       $("#loanBreakdown").append(text);
       _actionModal("open");
     },
