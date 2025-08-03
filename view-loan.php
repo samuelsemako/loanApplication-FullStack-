@@ -53,7 +53,6 @@
             </div>
         </div>
 
-
         <div class="image-div"></div>
 
         <div class="overlay" id='modal'>
